@@ -107,6 +107,21 @@ void appendArray(int arr[], int *n, int val)
     (*n)++;
 }
 
+void arrayDelete(int arr[], int *n, int key)
+{
+    int i = 0;
+
+    while (arr[i] != key)
+        i++;
+
+    for (int j = i; j < *n - 1; j++)
+    {
+        arr[j] = arr[j + 1];
+    }
+
+    (*n)--;
+}
+
 int main(void)
 {
     int arr[5] = {2, 4, 8, 16, 32};
